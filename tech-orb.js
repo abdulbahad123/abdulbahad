@@ -120,9 +120,9 @@
 
       // Back-half icons get slightly muted border
       if (depthNorm < 0.35) {
-        item.el.style.borderColor = 'rgba(128, 0, 255, 0.08)';
+        item.el.style.borderColor = 'rgba(15, 98, 254, 0.08)';
       } else {
-        item.el.style.borderColor = 'rgba(128, 0, 255, 0.25)';
+        item.el.style.borderColor = 'rgba(15, 98, 254, 0.25)';
       }
     }
   }

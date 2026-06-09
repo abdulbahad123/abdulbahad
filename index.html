@@ -25,23 +25,23 @@
   <meta name="description"
     content="Abdul Bahad | Portfolio, Visit and know about me & my projects/designs. B.Sc. Computer Science graduate skilled in the MERN Stack and CodeIgniter PHP." />
   <meta name="keywords"
-    content="abdul bahad, abdul bahad portfolio, Abdul Bahad Portfolio, abdulbahad, abdul bahad web developer, MERN stack developer, frontend developer, php developer, codeigniter developer" />
+    content="abdul bahad, abdul bahad portfolio, Abdul Bahad Portfolio, abdulbahad, abdul bahad web developer, full stack developer, frontend developer, php developer, codeigniter developer" />
   <meta name="author" content="Abdul Bahad" />
   <meta property="og:image" content="src/png/Preview-card-min.png" />
   <meta property="og:title" content="Abdul Bahad | Portfolio" />
   <meta property="og:description"
-    content="Hi! My name is Abdul Bahad. I'm a MERN Stack and PHP Web Developer. B.Sc. Computer Science graduate. Learn more about my projects, skills, and professional journey." />
+    content="Hi! My name is Abdul Bahad. I'm a Full Stack Web Developer. B.Sc. Computer Science graduate. Learn more about my projects, skills, and professional journey." />
   <meta property="og:url" content="https://abdulbahad123.github.io" />
   <meta property="og:site_name" content="Abdul Bahad Portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@abdulbahad123" />
   <meta name="twitter:title" content="Abdul Bahad | Portfolio" />
   <meta name="twitter:description"
-    content="Hi! My name is Abdul Bahad. I'm a MERN Stack and PHP Web Developer. B.Sc. Computer Science graduate. Learn more about my projects, skills, and professional journey." />
+    content="Hi! My name is Abdul Bahad. I'm a Full Stack Web Developer. B.Sc. Computer Science graduate. Learn more about my projects, skills, and professional journey." />
   <meta name="twitter:image" content="src/png/Preview-card-min.png" />
   <title>Abdul Bahad | Portfolio</title>
 
-  <link rel="icon" type="image/x-icon" href="src/png/main-favicon.png" />
+  <link rel="icon" type="image/png" href="src/png/portfolio_favicon.png" />
   <!-- aos cdn -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- stylesheet -->
@@ -54,22 +54,16 @@
   <audio loop="" id="audioPlayer" style="display: none">
     <source src="src/mp3/preloader.mp3" type="audio/mp3" />
   </audio>
-  <div id="preloader"></div>
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="loader-spinner"></div>
+      <div class="loader-logo">&lt;B /&gt;</div>
+    </div>
+  </div>
   <noscript>Allow Javascript</noscript>
 
-  <!-- Shooting Stars Background -->
-  <div class="shooting-stars-container" id="shooting-stars">
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-    <div class="shooting-star"></div>
-  </div>
+  <!-- Interactive Constellation Background -->
+  <canvas id="bg-canvas"></canvas>
 
   <header>
     <div class="cursor-inner" id="cursor-inner"></div>
@@ -78,39 +72,37 @@
     <div class="navbar" id="navbar">
       <div class="hey">Hey!</div>
       <div class="logo" tabindex="0" aria-label="abdul bahad logo">
-        <div class="logo-top">
-          <img src="src/png/nav-avatar.png" alt="Abdul Bahad avatar" id="nav-avatar" />
-        </div>
+        Abdul
       </div>
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
           <li class="home activeThistab" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
-              &#60;/Home&#62;
+              Home
             </a>
           </li>
 
           <li class="about" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="300">
             <a href="#about" aria-label="about menu button">
-              &#60;/AboutMe&#62;
+              AboutMe
             </a>
           </li>
 
           <li class="skills" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="500">
             <a href="#skills" aria-label="skills menu button">
-              &#60;/Skills&#62;
+              Skills
             </a>
           </li>
 
           <li class="experience" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="600">
             <a href="#experience" aria-label="experience menu button">
-              &#60;/Experience&#62;
+              Experience
             </a>
           </li>
 
           <li class="projects" class="navbar-tabs-li" data-aos="fade-down" data-aos-delay="700">
             <a href="#projects" aria-label="projects menu button">
-              &#60;/Projects&#62;
+              Projects
             </a>
           </li>
         </ul>
@@ -136,30 +128,30 @@
       <ul class="mobile-navbar-tabs-ul" id="mobile-ul">
         <li id="home-mobile-tab" class="mobile-navbar-tabs-li home activeThismobiletab" onclick="hidemenubyli()">
           <a href="#home" tabindex="0" aria-label="Home menu button">
-            &#60;/Home&#62;
+            Home
           </a>
         </li>
 
         <li id="aboutme-mobile-tab" class="mobile-navbar-tabs-li about" onclick="hidemenubyli()">
           <a href="#about" tabindex="0" aria-label="about menu button">
-            &#60;/AboutMe&#62;
+            AboutMe
           </a>
         </li>
         <li id="skills-mobile-tab" class="mobile-navbar-tabs-li skills" onclick="hidemenubyli()">
           <a href="#skills" tabindex="0" aria-label="skills menu button">
-            &#60;/Skills&#62;
+            Skills
           </a>
         </li>
 
         <li id="experience-mobile-tab" class="mobile-navbar-tabs-li experience" onclick="hidemenubyli()">
           <a href="#experience" tabindex="0" aria-label="experience menu button">
-            &#60;/Experience&#62;
+            Experience
           </a>
         </li>
 
         <li id="projects-mobile-tab" class="mobile-navbar-tabs-li projects" onclick="hidemenubyli()">
           <a href="#projects" tabindex="0" aria-label="projects menu button">
-            &#60;/Projects&#62;
+            Projects
           </a>
         </li>
       </ul>
@@ -169,94 +161,39 @@
     <section class="landing-page-container" id="home">
       <div class="blob"></div>
 
-      <div class="text-content">
-        <article id="hello-friend" data-aos="fade-up" data-aos-delay="0">
-          <p class="jello">H</p>
-          <p class="jello">e</p>
-          <p class="jello">l</p>
-          <p class="jello">l</p>
-          <p class="jello">o</p>
-          <p class="jello">(</p>
-          <p class="jello">)</p>
-          <p class="jello">;</p>
-          &nbsp;
-          <p class="jello">I</p>
-          <p class="jello">'</p>
-          <p class="jello">m</p>
-        </article>
-        <article id="name" data-aos="fade-up" data-aos-delay="200">
-          <p class="jello">A</p>
-          <p class="jello">b</p>
-          <p class="jello">d</p>
-          <p class="jello">u</p>
-          <p class="jello">l</p>
-          &nbsp;
-          <p class="jello">B</p>
-          <p class="jello">a</p>
-          <p class="jello">h</p>
-          <p class="jello">a</p>
-          <p class="jello">d</p>
-          <p class="jello">.</p>
-        </article>
-
-        <article id="work" data-aos="fade-up" data-aos-delay="400">
-          <div>
-            <p class="jello">M</p>
-            <p class="jello">E</p>
-            <p class="jello">R</p>
-            <p class="jello">N</p>
+      <div class="hero-content-wrapper">
+        <div class="text-content">
+          <h1 id="hello-friend" data-aos="fade-up" data-aos-delay="0">
+            Hello dev,
+          </h1>
+          <h2 id="name" data-aos="fade-up" data-aos-delay="200">
+            Abdul Bahad.
+          </h2>
+          <h3 id="work" data-aos="fade-up" data-aos-delay="400">
+            Full Stack Dev.
+          </h3>
+          <p id="info-para" data-aos="fade-up" data-aos-delay="600">
+            Passionate about creating innovative web solutions that bridge the gap between design and
+            functionality. I specialize in modern technologies and love turning complex problems into elegant,
+            user-friendly applications.<br />
+            <br />
+            I value simple content structure, clean design patterns, and
+            thoughtful interactions.
+          </p>
+          <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
+            <a href="mailto:abdulbahad.dev@gmail.com" tabindex="-1">
+              <button class="letsTalkBtn">
+                Let's get started <span class="arrow">&gt;</span>
+              </button></a>
           </div>
-          &nbsp;
-          <div>
-            <p class="jello">S</p>
-            <p class="jello">t</p>
-            <p class="jello">a</p>
-            <p class="jello">c</p>
-            <p class="jello">k</p>
-          </div>
-          &nbsp;
-          <div>
-            <p class="jello">D</p>
-            <p class="jello">e</p>
-            <p class="jello">v</p>
-            <p class="jello">.</p>
-          </div>
-        </article>
-        <p id="info-para" data-aos="fade-up" data-aos-delay="600">
-          Passionate about creating innovative web solutions that bridge the gap between design and
-          functionality. I specialize in modern technologies and love turning complex problems into elegant,
-          user-friendly applications.<br />
-          <br />
-          I value simple content structure, clean design patterns, and
-          thoughtful interactions.
-        </p>
-        <div class="contact-btn-div" data-aos="fade-up" data-aos-delay="800">
-          <a href="mailto:abdulbahad.dev@gmail.com" tabindex="-1">
-            <button class="letsTalkBtn">
-              <p class="letsTalkBtn-text">Let's Talk!</p>
-              <span class="letsTalkBtn-BG"></span>
-            </button></a>
-          <div class="setting-container" id="setting-container">
-            <input type="checkbox" id="switchforsetting" onclick="settingtoggle()" />
-
-            <label for="switchforsetting" class="needtobeinvert" id="labelforsetting" tabindex="0"
-              aria-label="settings for sound and appearance"></label>
-
-            <div class="visualmodetogglebuttoncontainer" id="visualmodetogglebuttoncontainer">
-              <input type="checkbox" id="switchforvisualmode" onclick="visualmode()" />
-              <label for="switchforvisualmode" id="labelforvisualmode" tabindex="0"
-                aria-label="switch appearance"></label>
-            </div>
-
-            <div class="soundtogglebuttoncontainer" id="soundtogglebuttoncontainer">
-              <input type="checkbox" id="switchforsound" onclick="playpause()" />
-              <label for="switchforsound" id="labelforsound" tabindex="0" aria-label="switch sound"
-                class="needtobeinvert"></label>
-            </div>
-          </div>
-          <!-- setting div ends -->
+          <!-- contact-btn-div -->
         </div>
-        <!-- contact-btn-div -->
+
+        <div class="hero-image-container" data-aos="fade-up" data-aos-delay="800">
+          <div class="hero-avatar-wrapper">
+            <img src="src/avatar/bahad_avatar.png" alt="Abdul Bahad" class="hero-avatar-img" />
+          </div>
+        </div>
       </div>
 
     </section>
@@ -286,18 +223,17 @@
             <!-- Resume button -->
             <button class="resume-btn" id="resume-btn" onclick="openURL()">
               <div class="sign">
-                <svg viewBox="0 0 640 512">
-                  <path
-                    d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.09 2.51 19.64 5.56 19.98C5.7 19.99 5.85 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04Z" fill="#ff7a00"/>
+                  <path d="M12 16L8 12H11V9H13V12H16L12 16Z" fill="white"/>
                 </svg>
               </div>
-
-              <div class="text">Resume</div>
+              <span class="text">Resume</span>
             </button>
           </div>
 
           <div class="dp" data-aos="fade-up">
-            <img src="src/png/nav-avatar.png" alt="Abdul Bahad" tabindex="0" aria-label="image of abdul bahad" />
+            <img src="src/avatar/bahad_avatar.png" alt="Abdul Bahad" tabindex="0" aria-label="image of abdul bahad" />
           </div>
         </div>
       </div>
@@ -342,10 +278,10 @@
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Frontend Developer</h3>
+                  <h3 class="exp-role">Full Stack Developer</h3>
                   <p class="exp-company">Nooryak Technologies &nbsp;·&nbsp; Full-time</p>
                 </div>
-                <span class="exp-date">May 2026 – Present (1 month)</span>
+                <span class="exp-date">May 2026 – Present</span>
               </div>
               <ul class="exp-bullets">
                 <li>Leading the development and implementation of responsive web interfaces using React.js and modern styling paradigms.</li>
@@ -392,7 +328,7 @@
             <div class="exp-card">
               <div class="exp-card-header">
                 <div>
-                  <h3 class="exp-role">Frontend Web Developer Intern</h3>
+                  <h3 class="exp-role">Full Stack Developer Intern</h3>
                   <p class="exp-company">Horizonium Solution &nbsp;·&nbsp; Internship</p>
                 </div>
                 <span class="exp-date">Sep 2024 – Sep 2024 (1 month)</span>
@@ -427,23 +363,39 @@
 
         <div class="project-tabs-container" data-aos="fade-up">
           <button class="project-tab active" data-filter="all">All</button>
-          <button class="project-tab" data-filter="mern">MERN Stack</button>
-          <button class="project-tab" data-filter="php">PHP / CodeIgniter</button>
-          <button class="project-tab" data-filter="wordpress">WordPress</button>
+          <button class="project-tab" data-filter="mern">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" class="tab-icon" />MERN Stack
+          </button>
+          <button class="project-tab" data-filter="php">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="" class="tab-icon" />PHP / CodeIgniter
+          </button>
+          <button class="project-tab" data-filter="wordpress">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="" class="tab-icon wp-tab-icon" />WordPress
+          </button>
         </div>
 
         <div class="project-boxes-div">
           <!-- Project 1 (Quick Cart) -->
+          <!-- Project 1 (Nooryak) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-nooryak">
+              <div class="image-div">
+                <img src="src/Project/nooryak.png" alt="Nooryak preview image" />
+              </div>
               <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon" class="faviconforProject" />
-                <article class="ProjectHeading">Quick Cart</article>
-                <p class="ProjectDescription">
-                  High-performance MERN Stack e-commerce platform featuring dynamic product uploads, full inventory control via a secure Admin Panel, and fluid customer checkouts.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // NEXT.JS & MERN</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Nooryak</h3>
+                <ul class="project-bullet-list">
+                  <li>Designed and built a high-performance Next.js 14 web platform featuring server-side rendering, SEO metadata, and dynamic content layouts.</li>
+                  <li>Connected a secure Express backend with MongoDB Atlas clusters, integrating real-time API state updates and Tailwind CSS responsive styling.</li>
+                </ul>
                 <div class="project-buttons">
-                  <a href="https://quickcartecomm.netlify.app/" target="_blank" class="cta" aria-label="Visit Quick Cart Live">
+                  <a href="https://nooryak.com/" target="_blank" class="cta" aria-label="Visit Nooryak Live">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
@@ -451,99 +403,40 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/Project/quickcart.png" alt="Quick Cart preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------- -->
-          <!-- Project 2 (Chatbot) -->
-          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS icon" class="faviconforProject" />
-                <article class="ProjectHeading">Chatbot Co</article>
-                <p class="ProjectDescription">
-                  Interactive chatbot system streamlining enquiries and job applications by replacing rigid form inputs with auto-filled, friendly, guided conversation bubbles.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://chatbotco.netlify.app/" target="_blank" class="cta" aria-label="Visit Chatbot Co Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-stack-icon" title="MongoDB" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-stack-icon" title="Express.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-stack-icon" title="React.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" class="tech-stack-icon" title="Node.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js" class="tech-stack-icon" title="Next.js" />
+                  </div>
                 </div>
               </div>
-              <div class="image-div">
-                <img src="src/Project/chatbot.png" alt="Chatbot Co preview image" />
-              </div>
             </div>
           </div>
           <!-- ---------------------- -->
-          <!-- Project 3 (EMS) -->
-          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS icon" class="faviconforProject" />
-                <article class="ProjectHeading">EMS Portal</article>
-                <p class="ProjectDescription">
-                  Robust employee management dashboard designed to track team structures, job roles, active worker lists, and database analytics through a highly secure interface.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://employeemanagementwebb.netlify.app/" target="_blank" class="cta" aria-label="Visit EMS Portal Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/Project/ems.png" alt="EMS Portal preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------- -->
-          <!-- Project 4 (Snackify) -->
-          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind icon" class="faviconforProject" />
-                <article class="ProjectHeading">Snackify</article>
-                <p class="ProjectDescription">
-                  Sleek fast-food and snack delivery web application featuring category sorting, quick cart adjustments, and responsive grids built using React.js and Tailwind CSS.
-                </p>
-                <div class="project-buttons">
-                  <a href="https://github.com/abdulbahad123?tab=repositories" target="_blank" class="cta" aria-label="Visit Snackify Github">
-                    <span>GitHub view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
-                      <path d="M1,5 L11,5"></path>
-                      <polyline points="8 1 12 5 8 9"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div class="image-div">
-                <img src="src/Project/snackify.png" alt="Snackify preview image" />
-              </div>
-            </div>
-          </div>
-          <!-- ---------------------- -->
-          <!-- Project 5 (Vasantham Realty) -->
+          <!-- Project 2 (Nooryak CRM) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="php">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-nooryakcrm">
+              <div class="image-div">
+                <img src="src/Project/nooryakcrm.png" alt="Nooryak CRM preview image" />
+              </div>
               <div class="info-div">
-                <img src="src/ico/wyd-favicon.ico" alt="PHP icon" class="faviconforProject" />
-                <article class="ProjectHeading">Vasantham Realty</article>
-                <p class="ProjectDescription">
-                  Comprehensive real estate web platform featuring secure authentication, property search filters, and an admin dashboard with dynamic Homepage Banner management.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // PHP & CODEIGNITER</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Nooryak CRM</h3>
+                <ul class="project-bullet-list">
+                  <li>Engineered a custom enterprise CRM platform using CodeIgniter PHP to manage client communications, lead tracking, and operations dashboards.</li>
+                  <li>Integrated relational MySQL schemas, optimized index usage, and custom session authentication guards to handle secure business transactions.</li>
+                </ul>
                 <div class="project-buttons">
-                  <a href="https://vasanthamrealty.com/" target="_blank" class="cta" aria-label="Visit Vasantham Realty Live">
+                  <a href="https://nooryakcrm.com/" target="_blank" class="cta" aria-label="Visit Nooryak CRM Live">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
@@ -551,22 +444,77 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/wyd-preview.webp" alt="Vasantham Realty preview image" />
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-stack-icon" title="MySQL" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg" alt="CodeIgniter" class="tech-stack-icon" title="CodeIgniter" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-stack-icon" title="Bootstrap" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- ---------------------- -->
-          <!-- Project 6 (Student Portal) -->
+          <!-- Project 3 (Chemarket) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="php">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-chemarket">
+              <div class="image-div">
+                <img src="src/Project/chemarket.png" alt="Chemarket preview image" />
+              </div>
               <div class="info-div">
-                <img src="src/ico/notesync-favicon.ico" alt="PHP Student icon" class="faviconforProject" />
-                <article class="ProjectHeading">Student Portal</article>
-                <p class="ProjectDescription">
-                  Robust portal managing grades, attendance, and role-based login credentials securely for 6,000+ active students. Designed with PHP, MySQL, and full administrative grids.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // PHP & JQUERY</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Chemarket</h3>
+                <ul class="project-bullet-list">
+                  <li>Developed a multi-vendor commercial trade platform with core PHP, optimizing database query structures to handle product catalog filters.</li>
+                  <li>Implemented dynamic interface updates with jQuery and AJAX requests, enabling real-time cart persistence and checkout steps.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://chemarket.com/" target="_blank" class="cta" aria-label="Visit Chemarket Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-stack-icon" title="MySQL" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" alt="jQuery" class="tech-stack-icon" title="jQuery" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-stack-icon" title="Bootstrap" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+          <!-- Project 4 (Student Portal) -->
+          <div data-aos="fade-up" class="project-box-wrapper" data-category="php">
+            <div class="project-box" id="project-box-studentportal">
+              <div class="image-div">
+                <img src="src/webp/notesync-preview.webp" alt="Student Portal preview image" />
+              </div>
+              <div class="info-div">
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // PHP & MYSQL</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP Student icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Student Portal</h3>
+                <ul class="project-bullet-list">
+                  <li>Developed a scalable student records database managing grades, attendance details, and role-based login credentials securely for 6,000+ active students.</li>
+                  <li>Engineered backend logic using PHP and MySQL query optimization, combined with Bootstrap grids for accessible administrative dashboards.</li>
+                </ul>
                 <div class="project-buttons">
                   <a href="https://nmedemo.free.nf/" target="_blank" class="cta" aria-label="Visit Student Portal Live">
                     <span>Live view</span>
@@ -576,24 +524,39 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/notesync-preview.webp" alt="Student Portal preview image" />
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-stack-icon" title="MySQL" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-stack-icon" title="Bootstrap" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-stack-icon" title="JavaScript" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- ---------------------- -->
-          <!-- Project 7 (Focus Logic) -->
+          <!-- Project 5 (Spark Event) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="php">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-sparkevent">
+              <div class="image-div">
+                <img src="src/Project/spark_event.png" alt="Spark Event preview image" />
+              </div>
               <div class="info-div">
-                <img src="src/webp/lunetra-favicon.webp" alt="CodeIgniter icon" class="faviconforProject" />
-                <article class="ProjectHeading">Focus Logic</article>
-                <p class="ProjectDescription">
-                  Enterprise-level e-commerce and MLM platforms designed with CodeIgniter, jQuery, and Bootstrap, featuring rich text editors (CKEditor) and structural downline matrix indicators.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // PHP & MYSQL</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Spark Event</h3>
+                <ul class="project-bullet-list">
+                  <li>Created a dynamic event booking platform supporting user registration, ticket reservations, and interactive calendar scheduling.</li>
+                  <li>Implemented administrative reports dashboard with secure session handling, using PHP CodeIgniter MVC patterns and MySQL relational schemas.</li>
+                </ul>
                 <div class="project-buttons">
-                  <a href="https://www.test-store.focuslogicsocialclub.com/" target="_blank" class="cta" aria-label="Visit Focus Logic Live">
+                  <a href="https://sparkevent.in/" target="_blank" class="cta" aria-label="Visit Spark Event Live">
                     <span>Live view</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>
@@ -601,22 +564,36 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/webp/lunetra-preview.webp" alt="Focus Logic preview image" />
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="tech-stack-icon" title="MySQL" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="tech-stack-icon" title="Bootstrap" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- ---------------------- -->
-          <!-- Project 8 (Arman Group) -->
+          <!-- Project 6 (Arman Group) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="wordpress">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-armangroup">
+              <div class="image-div">
+                <img src="src/Project/armangroup.png" alt="Arman Group preview image" />
+              </div>
               <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress icon" class="faviconforProject" />
-                <article class="ProjectHeading">Arman Group</article>
-                <p class="ProjectDescription">
-                  Premium luxury corporate website developed using WordPress, featuring detailed consulting showcases, business structures, and robust layout responsiveness.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // WORDPRESS</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Arman Group</h3>
+                <ul class="project-bullet-list">
+                  <li>Engineered a premium luxury corporate portal with WordPress, showcasing architectural portfolios and corporate structures.</li>
+                  <li>Optimized layout speed, SEO performance, and responsive styling to deliver an immersive consulting experience across all viewport sizes.</li>
+                </ul>
                 <div class="project-buttons">
                   <a href="https://armangroup.co.in/" target="_blank" class="cta" aria-label="Visit Arman Group Live">
                     <span>Live view</span>
@@ -626,22 +603,36 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/Project/armangroup.png" alt="Arman Group preview image" />
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="tech-stack-icon" title="WordPress" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-stack-icon" title="CSS" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- --------------------- -->
-          <!-- Project 9 (KP Enterprises) -->
+          <!-- Project 7 (KP Enterprises) -->
           <div data-aos="fade-up" class="project-box-wrapper" data-category="wordpress">
-            <div class="project-box project-box2" id="project-box2">
+            <div class="project-box" id="project-box-enterprises">
+              <div class="image-div">
+                <img src="src/Project/enterprises.png" alt="KP Enterprises preview image" />
+              </div>
               <div class="info-div">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress icon" class="faviconforProject" />
-                <article class="ProjectHeading">KP Enterprises</article>
-                <p class="ProjectDescription">
-                  Professional service-oriented WordPress portal built for industrial commercial trading, optimized with search engine visibility and responsive styling.
-                </p>
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // WORDPRESS</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">KP Enterprises</h3>
+                <ul class="project-bullet-list">
+                  <li>Constructed a professional trading showcase portal for commercial services, integrating search optimization and dynamic query forms.</li>
+                  <li>Implemented custom stylesheets and themes to reflect industrial branding, achieving high core web vitals and fast load times.</li>
+                </ul>
                 <div class="project-buttons">
                   <a href="https://enterpriseskp.in/" target="_blank" class="cta" aria-label="Visit KP Enterprises Live">
                     <span>Live view</span>
@@ -651,13 +642,176 @@
                     </svg>
                   </a>
                 </div>
-              </div>
-              <div class="image-div">
-                <img src="src/Project/enterprises.png" alt="KP Enterprises preview image" />
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" class="tech-stack-icon" title="WordPress" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="tech-stack-icon" title="PHP" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-stack-icon" title="CSS" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <!-- --------------------- -->
+          <!-- Project 8 (Quick Cart) -->
+          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
+            <div class="project-box" id="project-box-quickcart">
+              <div class="image-div">
+                <img src="src/Project/quickcart.png" alt="Quick Cart preview image" />
+              </div>
+              <div class="info-div">
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // MERN</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Quick Cart</h3>
+                <ul class="project-bullet-list">
+                  <li>Architected a full MERN stack e-commerce platform featuring JWT-secured admin panel, dynamic product catalog, and active stock inventory control.</li>
+                  <li>Integrated MongoDB database to manage persistency, Express RESTful API endpoints for client requests, and Netlify + Render deployment pipelines.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://quickcartecomm.netlify.app/" target="_blank" class="cta" aria-label="Visit Quick Cart Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-stack-icon" title="MongoDB" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-stack-icon" title="Express.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-stack-icon" title="React.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" class="tech-stack-icon" title="Node.js" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+          <!-- Project 9 (Chatbot) -->
+          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
+            <div class="project-box" id="project-box-chatbot">
+              <div class="image-div">
+                <img src="src/Project/chatbot.png" alt="Chatbot Co preview image" />
+              </div>
+              <div class="info-div">
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // JAVASCRIPT</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Chatbot Co</h3>
+                <ul class="project-bullet-list">
+                  <li>Developed an interactive chatbot interface to replace traditional form entry, parsing user inputs dynamically to streamline job applications and enquiries.</li>
+                  <li>Optimized responsive animations and transitions for guided conversation bubbles, maximizing user engagement and feedback collection rates.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://chatbotco.netlify.app/" target="_blank" class="cta" aria-label="Visit Chatbot Co Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="tech-stack-icon" title="HTML5" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="tech-stack-icon" title="CSS3" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-stack-icon" title="JavaScript" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+          <!-- Project 10 (EMS) -->
+          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
+            <div class="project-box" id="project-box-ems">
+              <div class="image-div">
+                <img src="src/Project/ems.png" alt="EMS Portal preview image" />
+              </div>
+              <div class="info-div">
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // MERN</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="NodeJS icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">EMS Portal</h3>
+                <ul class="project-bullet-list">
+                  <li>Designed a secure administrative dashboard to track worker hierarchies, monitor active employee records, and update organizational structures in real-time.</li>
+                  <li>Integrated MongoDB for database reliability, Node/Express for middleware authentication, and Tailwind CSS for a dark dashboard aesthetic.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://employeemanagementwebb.netlify.app/" target="_blank" class="cta" aria-label="Visit EMS Portal Live">
+                    <span>Live view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="tech-stack-icon" title="MongoDB" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" class="tech-stack-icon" title="Express.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-stack-icon" title="React.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node" class="tech-stack-icon" title="Node.js" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
+          <!-- Project 11 (Snackify) -->
+          <div data-aos="fade-up" class="project-box-wrapper" data-category="mern">
+            <div class="project-box" id="project-box-snackify">
+              <div class="image-div">
+                <img src="src/Project/snackify.png" alt="Snackify preview image" />
+              </div>
+              <div class="info-div">
+                <div class="project-subtitle-row">
+                  <span class="project-category-tag">PROJECT // REACT & TAILWIND</span>
+                  <div class="project-badge">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind icon" class="project-badge-icon" />
+                  </div>
+                </div>
+                <h3 class="ProjectHeading">Snackify</h3>
+                <ul class="project-bullet-list">
+                  <li>Built a modern fast-food delivery web interface featuring responsive grids, quick category sorting, and interactive cart calculations.</li>
+                  <li>Implemented optimized React component lifecycle states and styling with Tailwind CSS, ensuring smooth rendering across mobile devices.</li>
+                </ul>
+                <div class="project-buttons">
+                  <a href="https://github.com/abdulbahad123?tab=repositories" target="_blank" class="cta" aria-label="Visit Snackify Github">
+                    <span>GitHub view</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                      <path d="M1,5 L11,5"></path>
+                      <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                  </a>
+                </div>
+                <div class="project-stack-row">
+                  <span class="stack-label">STACK:</span>
+                  <div class="project-tech-stack">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" class="tech-stack-icon" title="React.js" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="tech-stack-icon" title="Tailwind CSS" />
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="tech-stack-icon" title="JavaScript" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ---------------------- -->
         </div>
       </div>
     </section>
@@ -665,8 +819,10 @@
   <!-- main ends here -->
 
   <footer id="footer">
-    <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
-      <article aria-label="Back to top">&#8592;BACK TO TOP</article>
+    <button id="backtotopbutton" onclick="scrolltoTopfunction()" aria-label="Back to top">
+      <svg viewBox="0 0 24 24">
+        <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z" fill="currentColor"></path>
+      </svg>
     </button>
     <div class="footer-background">
       <div class="footer-blob"></div>
@@ -674,13 +830,13 @@
     <div class="footer-foreground">
       <div class="footercontainer">
         <div class="two-words">
-          <article tabindex="0" aria-label="Learning, Living, and Leveling Up, my quote">
-            "Learning, Living, and Leveling Up."
+          <article tabindex="0" aria-label="Coding, Designing, and Evolving, my quote">
+            "Coding, Designing, and Evolving."
           </article>
         </div>
         <div class="social-media-container">
           <div class="getintouch-heading">
-            <article>GetinTouch();</article>
+            <article>contactMe();</article>
           </div>
           <div class="logos">
             <a href="https://www.linkedin.com/in/abdul-bahad-4a4461282/?locale=en" target="_blank" aria-label="My LinkedIn"><svg
@@ -703,7 +859,7 @@
           </div>
         </div>
         <div class="footer-avatar-container">
-          <img src="src/png/footer-avatar-vinod.png" alt="Abdul Bahad avatar" class="footer-avatar-img"
+          <img src="src/avatar/bahad_avatar.png" alt="Abdul Bahad avatar" class="footer-avatar-img"
             id="footer-wala-avatar" />
           <div class="footer-avatar-face">
             <div class="footer-avatar-eye footer-left-eye">
@@ -806,6 +962,7 @@
     });
   </script>
   <script src="tech-orb.js"></script>
+  <script src="particles.js"></script>
 </body>
 
 </html>
